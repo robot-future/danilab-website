@@ -1,0 +1,16 @@
+# Font theme: DANiLab
+# Newsreader for headings, Inter for body copy and navigation.
+# Selected via `appearance.font: danilab` in config/_default/params.yaml.
+#
+# `google_fonts` is left blank here on purpose: the actual @import for these
+# two families lives in assets/css/custom.css (loaded via
+# layouts/partials/custom_head.html) so there is a single place that owns
+# font loading, rather than loading Google Fonts twice.
+name = "DANiLab"
+
+google_fonts = ""
+
+heading_font = "Newsreader"
+body_font = "Inter"
+nav_font = "Inter"
+mono_font = ""

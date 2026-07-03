@@ -1,0 +1,4 @@
+{{/* Loads assets/css/custom.css (Google Fonts imports, etc.) into <head>. */}}
+{{ with resources.Get "css/custom.css" }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ end }}

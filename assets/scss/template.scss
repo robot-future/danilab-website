@@ -1,3 +1,37 @@
+// ============================================================
+// DANiLab colour & typography system
+// Primary/accent, link, nav and background colours are set in
+// data/themes/danilab.toml (selected via appearance.theme_day in
+// params.yaml), so Bootstrap buttons/links/nav pick them up automatically.
+// The rules below cover the handful of places the theme hardcodes its own
+// colour instead of using the theme variables.
+// ============================================================
+
+$danilab-text: #2e2e2e; // charcoal — primary text
+$danilab-muted: #6b7280; // slate grey — secondary/muted text
+$danilab-card-bg: #ffffff; // white cards on the off-white page background
+
+html {
+  color: $danilab-text;
+}
+
+.text-muted {
+  color: $danilab-muted !important;
+}
+
+// Small accent bar under block section titles (e.g. "Meet the Team",
+// "Research Themes"), using the site's accent colour. Scoped to
+// `.section-heading h1` so it doesn't affect the hero title or article
+// headings inside post/publication pages.
+.section-heading h1::after {
+  content: '';
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin: 0.5rem auto 0;
+  background-color: $sta-primary;
+}
+
 // Make page header alignment consistent with widget page header alignment
 .universal-wrapper h1 {
   text-align: center;
@@ -6,4 +40,119 @@
 // Center the CTA shortcode button
 .cta-group {
   justify-content: center;
+}
+
+// ---- Typography scale & vertical rhythm --------------------------------
+// Clear hierarchy: hero title (largest) > section headings > body. Base body
+// font is 21px (font_size: L), so rem values below are multiples of 21px.
+
+// Hero headline — largest element on the page, with a touch more weight so the
+// serif reads confidently rather than thin (theme default is 2.7rem / weight 400).
+.hero-title {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+// Hero standfirst — dial back from the theme's 1.35rem so it supports the
+// headline instead of competing with it.
+.hero-lead {
+  font-size: 1.15rem;
+}
+
+// Section headings ("Research Themes", "Latest News", ...). Theme default
+// renders these at ~2.25rem, which out-sized the hero title; bring them below
+// it so the hierarchy reads top-down.
+.section-heading h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+// Even, calmer vertical rhythm between homepage sections (theme default is a
+// heavy 110px top+bottom, which left cavernous gaps around short sections).
+// The hero keeps its own tighter padding via higher-specificity theme rules.
+.home-section {
+  padding: 80px 0;
+}
+
+// ---- Navbar brand logo -------------------------------------------------
+// The theme shows either a logo image OR the site-title text, not both. Keep
+// the readable "DANiLab" wordmark and place the "D" brand mark before it via a
+// background image (served from static/media for a stable URL). The mark is
+// rendered smaller than its native 94x85, so it stays crisp.
+.navbar-brand::before {
+  content: '';
+  display: inline-block;
+  width: 1.5em;
+  height: 1.35em;
+  margin-right: 0.4em;
+  vertical-align: -0.35em;
+  background: url('/media/logo-mark.png') no-repeat left center;
+  background-size: contain;
+}
+
+// Partner/funder logo strip: each logo sits in a common-height band and is vertically
+// centered within it, so wide wordmarks and compact/square marks (which render narrower
+// and shorter if simply capped to the same max-height) still read as the same visual weight.
+// Caption text sits directly under each logo with minimal gap, aligned in the same column.
+.funder-logo-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 84px;
+}
+.funder-logo {
+  margin-bottom: 0.35rem !important;
+}
+.funder-logo img {
+  max-height: 64px;
+  width: auto;
+  object-fit: contain;
+}
+// Compact/square marks (e.g. icon-over-wordmark logos) need more height to read at a
+// comparable size to wide single-line wordmarks capped at the same max-height.
+.funder-logo--tall img {
+  max-height: 84px;
+}
+
+// Team page: circular photo avatars
+.team-photo {
+  margin-bottom: 0.5rem !important;
+}
+.team-photo img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+// Team page: white card behind each member, with a soft border/shadow so it
+// still reads as a card against the off-white page background, and lifts
+// further on hover.
+.person-card {
+  height: 100%;
+  padding: 1.5rem 1rem 1.25rem;
+  border-radius: 12px;
+  background-color: $danilab-card-bg;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.person-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+// Team page: small pill badge showing each member's role (replaces grouped section headings)
+.person-role {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $danilab-muted;
+  background-color: #e5e7eb;
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  margin: 0.35rem 0 0.5rem;
 }

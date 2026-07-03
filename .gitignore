@@ -5,3 +5,11 @@
 /resources/
 public/
 assets/jsconfig.json
+.hugo_build.lock
+
+# Local-only migration & tooling artifacts (not part of the site)
+/wordpress-lab-backup/
+/.claude/
+
+# macOS
+.DS_Store

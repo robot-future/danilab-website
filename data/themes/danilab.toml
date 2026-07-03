@@ -1,0 +1,25 @@
+# Colour theme: DANiLab
+# Charcoal text, energised red accent (used sparingly for links/buttons/small
+# heading accents), off-white page background. Selected via
+# `appearance.theme_day: danilab` in config/_default/params.yaml.
+name = "DANiLab"
+
+[light]
+  # Accent — drives links, buttons, active nav state, small heading accents
+  primary = "#C8102E"
+
+  # Links
+  link = "#C8102E"
+  link_hover = "#A20D24"
+
+  # Top navigation bar
+  menu_primary = "#FFFFFF"
+  menu_text = "#2E2E2E"
+  menu_text_active = "#C8102E"
+  menu_title = "#2E2E2E"
+
+  # Page background (Bootstrap `.card` / `.card-simple` stay white by default,
+  # giving the "white cards on off-white background" look)
+  background = "#FAFAFA"
+  home_section_odd = "#FAFAFA"
+  home_section_even = "#FAFAFA"

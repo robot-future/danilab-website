@@ -1,26 +1,162 @@
 ---
-title: People
+title: Team
 date: 2022-10-24
 
 type: landing
 
 sections:
-  - block: people
+  - block: markdown
     content:
       title: Meet the Team
-      # Choose which groups/teams of users to display.
-      #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
-      user_groups:
-          - Principal Investigators
-          - Researchers
-          - Grad Students
-          - Administration
-          - Visitors
-          - Alumni
-      sort_by: Params.last_name
-      sort_ascending: true
+      text: |
+        <div class="row text-center">
+        <div class="col-6 col-sm-4 col-md-3 mb-4">
+
+        <div class="person-card">
+
+        {{< figure src="daniel-hao.jpg" alt="Daniel Hao" class="team-photo" lightbox="false" >}}
+
+        **[Dr Daniel Hao](https://le.ac.uk/people/daniel-hao)**
+
+        <div class="person-role">Principal Investigator</div>
+
+        </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4">
+
+        <div class="person-card">
+
+        {{< figure src="umer-chaudry.jpg" alt="Umer Masood Chaudry" class="team-photo" lightbox="false" >}}
+
+        **[Dr Umer Masood Chaudry](https://scholar.google.com/citations?user=Qwkk_vsAAAAJ&hl=en)**
+
+        <div class="person-role">Research Fellow</div>
+
+        Funded by UKSA — Space Metallurgy and ISAM
+
+        </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4">
+
+        <div class="person-card">
+
+        {{< figure src="hanxin-zhang.jpg" alt="Hanxin Zhang" class="team-photo" lightbox="false" >}}
+
+        **[Hanxin Zhang](https://hanxin-zhang.github.io/)**
+
+        <div class="person-role">PhD Candidate</div>
+
+        VLA for Human-Robot Handover
+
+        </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4">
+
+        <div class="person-card">
+
+        {{< figure src="abdulqader-dhafer.jpg" alt="Abdulqader Dhafer" class="team-photo" lightbox="false" >}}
+
+        **[Abdulqader Dhafer](https://adhafer.github.io/)**
+
+        <div class="person-role">PhD Candidate</div>
+
+        AI for Robotic Manufacturing
+
+        </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4">
+
+        <div class="person-card">
+
+        {{< figure src="gemma-mclean.jpg" alt="Gemma McLean" class="team-photo" lightbox="false" >}}
+
+        **Gemma McLean**
+
+        <div class="person-role">PhD Candidate</div>
+
+        Vision-tactile Robotic Grasping
+
+        </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4">
+
+        <div class="person-card">
+
+        {{< figure src="ansel-ong.jpg" alt="Ansel Ong" class="team-photo" lightbox="false" >}}
+
+        **Ansel Ong**
+
+        <div class="person-role">PhD Candidate</div>
+
+        World Model for Digital Manufacturing
+
+        </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4">
+
+        <div class="person-card">
+
+        {{< figure src="mingshuo-xu.jpg" alt="Mingshuo Xu" class="team-photo" lightbox="false" >}}
+
+        **[Mingshuo Xu](https://mingshuoxu.github.io/aboutme/)**
+
+        <div class="person-role">PhD Candidate (Co-Supervising)</div>
+
+        Small Target Detection and Tracking
+
+        </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4">
+
+        <div class="person-card">
+
+        {{< figure src="lin-qi.jpg" alt="Lin Qi" class="team-photo" lightbox="false" >}}
+
+        **Lin Qi**
+
+        <div class="person-role">PhD Candidate (Co-Supervising)</div>
+
+        Swarm Robot Vision
+
+        </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4">
+
+        <div class="person-card">
+
+        **Dr Roin (Lijia) Deng**
+
+        <div class="person-role">Alumni</div>
+
+        AI Computer Vision Based Counting
+
+        </div>
+
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4">
+
+        <div class="person-card">
+
+        **Dr Hengde Zhu**
+
+        <div class="person-role">Alumni</div>
+
+        Gen. AI for Affective Computing
+
+        </div>
+
+        </div>
+        </div>
+
+        Our PG/UG DriverLeics Team — [driverleics.github.io](https://driverleics.github.io/)
     design:
-      show_interests: false
-      show_role: true
-      show_social: true
+      columns: '1'
 ---
