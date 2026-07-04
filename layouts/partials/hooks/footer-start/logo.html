@@ -1,0 +1,11 @@
+{{/* DANiLab full logo at the top of the site footer (footer-start hook). */}}
+{{ with resources.Get "media/full_lab_logo_3@4x.png" }}
+  {{ $logo := .Resize "560x" }}
+  <div class="footer-logo">
+    <a href="{{ site.Home.RelPermalink }}" aria-label="{{ site.Title }} home">
+      <img src="{{ $logo.RelPermalink }}"
+           width="{{ $logo.Width }}" height="{{ $logo.Height }}"
+           alt="DANiLab — Dynamics, Astronautics & Neural Intelligence Lab" loading="lazy">
+    </a>
+  </div>
+{{ end }}
