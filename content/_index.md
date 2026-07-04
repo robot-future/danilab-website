@@ -107,48 +107,64 @@ sections:
 
   - block: markdown
     content:
-      title: Research Funders
+      title: Selected Projects and Funders
       subtitle:
       text: |
-        <div class="row text-center">
-        <div class="col-6 col-md-3 mb-4">
-        <div class="funder-logo-cell">
+        <div class="row justify-content-center">
+        <div class="col-6 col-md-3 mb-4 d-flex">
+
+        <div class="funder">
+        <div class="funder__logo">
 
         {{< figure src="funders/uksa-logo.png" alt="UK Space Agency" class="funder-logo" lightbox="false" >}}
 
         </div>
 
-        <small>PI — NSIP-2 ISPARK with TWI Ltd; PI (Leicester) — NSTP PLATOR with Surrey Space Centre</small>
+        <div class="funder__caption">PI — NSIP-2 ISPARK with TWI Ltd; PI (Leicester) — NSTP PLATOR with Surrey Space Centre</div>
 
         </div>
-        <div class="col-6 col-md-3 mb-4">
-        <div class="funder-logo-cell">
+
+        </div>
+        <div class="col-6 col-md-3 mb-4 d-flex">
+
+        <div class="funder">
+        <div class="funder__logo">
 
         {{< figure src="funders/esa-logo.png" alt="European Space Agency" class="funder-logo" lightbox="false" >}}
 
         </div>
 
-        <small>ESA/NASA Mars Sample Return DWI Project E/019A-02R — MSR SRP E3P2</small>
+        <div class="funder__caption">ESA/NASA Mars Sample Return DWI Project E/019A-02R — MSR SRP E3P2</div>
 
         </div>
-        <div class="col-6 col-md-3 mb-4">
-        <div class="funder-logo-cell">
+
+        </div>
+        <div class="col-6 col-md-3 mb-4 d-flex">
+
+        <div class="funder">
+        <div class="funder__logo">
 
         {{< figure src="funders/ukri-epsrc-logo.png" alt="UKRI EPSRC" class="funder-logo" lightbox="false" >}}
 
         </div>
 
-        <small>Co-I — EPSRC Centre for Doctoral Training in Digital Transformation of Metals Industry</small>
-
-        </div>
-        <div class="col-6 col-md-3 mb-4">
-        <div class="funder-logo-cell">
-
-        {{< figure src="funders/agentic-6g-logo.png" alt="Agentic-6G" class="funder-logo funder-logo--tall" lightbox="false" >}}
+        <div class="funder__caption">Co-I — EPSRC Centre for Doctoral Training in Digital Transformation of Metals Industry</div>
 
         </div>
 
-        <small>Co-I — Agentic-6G Autonomous multi-agent agentic AI system for 6G networks</small>
+        </div>
+        <div class="col-6 col-md-3 mb-4 d-flex">
+
+        <div class="funder">
+        <div class="funder__logo funder__logo--tall">
+
+        {{< figure src="funders/agentic-6g-logo.png" alt="Agentic-6G" class="funder-logo" lightbox="false" >}}
+
+        </div>
+
+        <div class="funder__caption">Co-I — Agentic-6G Autonomous multi-agent agentic AI system for 6G networks</div>
+
+        </div>
 
         </div>
         </div>
