@@ -26,16 +26,49 @@ sections:
                                               
   - block: markdown
     content:
-      title: Research Themes
+      title: Research Areas
       text: |
-        - **Embodied Intelligence & World Models** — Learning predictive representations of the physical world to support planning, reasoning, and decision-making in real environments.
-        - **Vision-Language-Action (VLA) Systems** — Integrating perception, language, and control to enable robots to understand tasks and generalise across diverse scenarios.
-        - **Autonomous Systems & Control** — Developing reliable and safe decision-making frameworks for robotics in safety-critical domains, including space and manufacturing.
+        <div class="row research-areas">
+        <div class="col-md-6 mb-4 mb-md-0 d-flex">
 
-        **Applications:**
+        <div class="research-area">
 
-        - Intelligent robotic manufacturing
-        - In-orbit servicing and manufacturing (ISAM)
+        ## Physical AI
+
+        Developing intelligent systems that perceive, reason, learn and act in the physical world.
+
+        <div class="research-area__topics">
+        <span class="research-area__tag">World Models</span>
+        <span class="research-area__tag">Vision-Language-Action</span>
+        <span class="research-area__tag">Spatial Intelligence</span>
+        <span class="research-area__tag">Robot Learning</span>
+        <span class="research-area__tag">Human-Robot Collaboration</span>
+        <span class="research-area__tag">Agentic AI</span>
+        </div>
+
+        </div>
+
+        </div>
+        <div class="col-md-6 d-flex">
+
+        <div class="research-area">
+
+        ## Space Robotics &amp; Autonomous Systems
+
+        Developing intelligent autonomy for spacecraft, robotic missions and in-space servicing, assembly and manufacturing.
+
+        <div class="research-area__topics">
+        <span class="research-area__tag">Space Mission Autonomy</span>
+        <span class="research-area__tag">Spacecraft GNC</span>
+        <span class="research-area__tag">ISAM</span>
+        <span class="research-area__tag">In-Orbit Servicing</span>
+        <span class="research-area__tag">Rendezvous and Manipulation</span>
+        </div>
+
+        </div>
+
+        </div>
+        </div>
     design:
       columns: '1'
 
