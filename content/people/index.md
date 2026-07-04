@@ -48,7 +48,7 @@ sections:
 
         <div class="person-role">PhD Candidate</div>
 
-        VLA for Human-Robot Handover
+        VLA/WAM Explainability & Causality
 
         </div>
 
@@ -63,7 +63,7 @@ sections:
 
         <div class="person-role">PhD Candidate</div>
 
-        AI for Robotic Manufacturing
+        WAM for Robotic Navigation in Manufacturing Environments (EPSRC)
 
         </div>
 
@@ -78,7 +78,7 @@ sections:
 
         <div class="person-role">PhD Candidate</div>
 
-        Vision-tactile Robotic Grasping
+        VLA/WAM Robotic Grasping (GTA)
 
         </div>
 
@@ -93,7 +93,7 @@ sections:
 
         <div class="person-role">PhD Candidate</div>
 
-        World Model for Digital Manufacturing
+        World Model for Digital Manufacturing (EPSRC)
 
         </div>
 
@@ -123,7 +123,7 @@ sections:
 
         <div class="person-role">PhD Candidate (Co-Supervising)</div>
 
-        Swarm Robot Vision
+        Intelligent Swarm Robotics
 
         </div>
 
