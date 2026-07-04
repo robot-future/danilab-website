@@ -464,3 +464,18 @@ html {
   font-size: 1.05rem;
   line-height: 1.6;
 }
+
+// Publications page: highlighted "site recently migrated" notice at the top.
+.pub-notice {
+  max-width: 820px;
+  margin: 0 auto 2rem;
+  padding: 0.9rem 1.25rem;
+  background-color: #f7edef;
+  background-color: color-mix(in srgb, #{$sta-primary} 6%, #{$sta-background});
+  border-left: 4px solid $sta-primary;
+  border-radius: 8px;
+}
+.pub-notice p {
+  margin: 0;
+  color: $danilab-text;
+}
