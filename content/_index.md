@@ -120,7 +120,7 @@ sections:
 
         </div>
 
-        <div class="funder__caption">PI — NSIP-2 ISPARK with TWI Ltd; PI (Leicester) — NSTP PLATOR with Surrey Space Centre</div>
+        <div class="funder__caption">PI — NSIP-2 ISPARK with TWI Ltd<br>PI (Leicester) — NSTP PLATOR with Surrey Space Centre</div>
 
         </div>
 
