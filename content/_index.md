@@ -19,7 +19,7 @@ sections:
         alt: Illustration of the DANiLab team with robotic systems in a laboratory
       cta:
         url: ./publication/
-        label: View publications
+        label: Explore our research
       cta_alt:
         url: ./people/
         label: Meet the team

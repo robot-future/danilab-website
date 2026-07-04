@@ -234,7 +234,12 @@ html {
   flex: 1 1 0;
   min-width: 150px;
   margin-bottom: 0;
-  padding: 0.65rem 1rem;
+  // Centre the label inside the button regardless of the theme's button
+  // padding (which otherwise crowds the longer label off-centre).
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.25rem !important;
   font-size: 1rem;
   white-space: nowrap;
   text-align: center;
