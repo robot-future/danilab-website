@@ -12,4 +12,4 @@ Dr Hao is the Co-I of this CDT.
 
 The new £18 million Centre for Doctoral Training (CDT) in Digital Transformation of Metals Industry (DigitalMetal) has been funded by the Engineering and Physical Sciences Research Council (EPSRC), who announced £7m funding today (12 March), five partner universities (Birmingham, Leicester, Loughborough, Nottingham and Warwick) and industry.
 
-More information please visit: [https://le.ac.uk/news/2024/march/digital-metal](https://le.ac.uk/news/2024/march/digital-metal)
+More information is on the [University of Leicester news page](https://le.ac.uk/news/2024/march/digital-metal).

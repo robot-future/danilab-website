@@ -6,7 +6,7 @@ image:
   focal_point: 'Smart'
 ---
 
-News URL originated: [https://le.ac.uk/news/2024/september/space-festival](https://le.ac.uk/news/2024/september/space-festival)
+Read more on the [University of Leicester news page](https://le.ac.uk/news/2024/september/space-festival).
 
 The technology behind self-driving cars is playing a key role in future space missions, according to a team of scientists who have been demonstrating the importance of AI and robotics in space exploration.
 

@@ -18,4 +18,4 @@ As invited exhibitors, we joined the DriverLeics team, comprised of academics fr
 
 ![](L1080673-Large.jpeg)
 
-Learn more on: [https://le.ac.uk/news/2024/june/bright-sparks-2024](https://le.ac.uk/news/2024/june/bright-sparks-2024)
+Learn more on the [University of Leicester news page](https://le.ac.uk/news/2024/june/bright-sparks-2024).

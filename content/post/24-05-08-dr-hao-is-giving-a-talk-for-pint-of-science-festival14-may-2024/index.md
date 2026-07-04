@@ -6,7 +6,7 @@ image:
   focal_point: 'Smart'
 ---
 
-**Get your ticket** here: [https://pintofscience.co.uk/event/look-into-my-AIs](https://pintofscience.co.uk/event/look-into-my-AIs)
+**Get your ticket** on the [Pint of Science event page](https://pintofscience.co.uk/event/look-into-my-AIs).
 
 How AI powered robots will change our life in the next 5 years.
 

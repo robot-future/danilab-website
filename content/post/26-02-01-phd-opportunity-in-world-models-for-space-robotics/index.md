@@ -51,6 +51,6 @@ Applicants are strongly encouraged to contact the supervisors of the GTA project
 
 ## Apply
 
-Find a PhD website: [https://www.findaphd.com/phds/project/gta-funded-world-model-based-intelligent-robotics-for-in-space-servicing-assembly-and-manufacturing-isam/?p194201](https://www.findaphd.com/phds/project/gta-funded-world-model-based-intelligent-robotics-for-in-space-servicing-assembly-and-manufacturing-isam/?p194201)
+Find the [project listing on FindAPhD](https://www.findaphd.com/phds/project/gta-funded-world-model-based-intelligent-robotics-for-in-space-servicing-assembly-and-manufacturing-isam/?p194201).
 
-Apply at: [https://le.ac.uk/study/research-degrees/funded-opportunities/computer-science-gta](https://le.ac.uk/study/research-degrees/funded-opportunities/computer-science-gta)
+Apply on the [University of Leicester Computer Science GTA page](https://le.ac.uk/study/research-degrees/funded-opportunities/computer-science-gta).

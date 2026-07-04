@@ -6,7 +6,7 @@ image:
   focal_point: 'Smart'
 ---
 
-Find the details on: [https://www.findaphd.com/phds/project/imitation-learning-for-robotic-manufacturing-transformation/?p159322](https://www.findaphd.com/phds/project/imitation-learning-for-robotic-manufacturing-transformation/?p159322)
+Find the details on the [project listing on FindAPhD](https://www.findaphd.com/phds/project/imitation-learning-for-robotic-manufacturing-transformation/?p159322).
 
 ## About the Project
 
@@ -47,7 +47,7 @@ The selected candidate will have access to facilities including the Universal Ro
 
 Contact the project supervisor, Dr Daniel Z. Hao, at d(dot)hao(at)leicester(dot)ac(dot)uk or cmspgr(at)le(dot)ac(dot)uk.
 
-Further details and application advice: [https://le.ac.uk/study/research-degrees/funded-opportunities/cms-gta](https://www.findaphd.com/common/clickCount.aspx?theid=159322&type=184&DID=2033&url=https%3a%2f%2fle.ac.uk%2fstudy%2fresearch-degrees%2ffunded-opportunities%2fcms-gta)
+Further details and application advice are on the [University of Leicester CMS GTA page](https://le.ac.uk/study/research-degrees/funded-opportunities/cms-gta).
 
 ---
 
