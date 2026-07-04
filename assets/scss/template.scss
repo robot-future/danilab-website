@@ -226,15 +226,26 @@ html {
   flex-wrap: wrap;
   gap: 0.75rem;
 }
+// Matched pair: same solid-red scheme, equal width, sitting on one row.
+// flex:1 makes both buttons grow equally to fill the row; the min-width lets
+// them wrap to a stack only on very narrow (mobile) widths. Trim the default
+// btn-lg font/padding so the longer label stays on a single line.
 .home-hero__cta {
+  flex: 1 1 0;
+  min-width: 150px;
   margin-bottom: 0;
+  padding: 0.65rem 1rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .home-hero__img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 // Mobile: single column, text first then image, and centre the CTA row and
