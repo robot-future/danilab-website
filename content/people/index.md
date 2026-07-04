@@ -33,7 +33,7 @@ sections:
 
         <div class="person-role">Research Fellow</div>
 
-        Funded by UKSA — Space Metallurgy and ISAM
+        In-Space Servicing and Space Metallurgy (UKSA)
 
         </div>
 
