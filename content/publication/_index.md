@@ -12,6 +12,6 @@ banner:
 
 <div class="pub-notice">
 
-We recently migrated to this new website and are progressively updating our publication records. More of our AI and space research will be added here through 2026.
+We recently migrated to this new website. Our earlier publications prior to 2026 are still being migrated and will be added here soon.
 
 </div>
