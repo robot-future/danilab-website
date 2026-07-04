@@ -318,3 +318,130 @@ html {
   border-radius: 6px;
   padding: 0.2rem 0.6rem;
 }
+
+// ============================================================
+// Homepage "Latest News" (Phase 3) — three equal cards in a row.
+// `newscard` view rendered into a responsive grid: 3-up desktop, 2-up tablet,
+// 1-up mobile. Restrained cards (border, small radius, subtle hover lift; no
+// image zoom). Titles/excerpts are line-clamped for even card heights.
+// ============================================================
+.collection-items--newscard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@include media-breakpoint-down(lg) {
+  .collection-items--newscard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@include media-breakpoint-down(sm) {
+  .collection-items--newscard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $danilab-card-bg;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.news-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+// Consistent 16:9 media area (image is already Fill-cropped to 16:9).
+.news-card__media {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #eee;
+}
+.news-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.news-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.1rem 1.2rem 1.2rem;
+}
+.news-card__date {
+  font-size: 0.8rem;
+  color: $danilab-muted;
+  margin-bottom: 0.4rem;
+}
+.news-card__title {
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin: 0 0 0.55rem;
+  // clamp to 2 lines
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.news-card__title a {
+  color: $danilab-text;
+}
+.news-card__title a:hover {
+  color: $sta-primary;
+}
+.news-card__excerpt {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: $danilab-text;
+  margin: 0 0 1rem;
+  // clamp to 3 lines
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.news-card__more {
+  margin-top: auto;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: $sta-primary;
+}
+.news-card__more:hover {
+  color: darken($sta-primary, 8%);
+}
+
+// Centre the "see all" archive link beneath the grid.
+.wg-collection .see-all {
+  text-align: center;
+}
+
+// ============================================================
+// Homepage "Work With Us" (Phase 3) — one concise, visually distinct band
+// (replaces the old duplicate Join + Meet-the-team CTAs; the hero already
+// links to the Team). Lightly tinted, centred, not a big promo banner.
+// ============================================================
+.work-with-us {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f8f1f2;
+  background-color: color-mix(in srgb, #{$sta-primary} 4%, #{$sta-background});
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+}
+.work-with-us p {
+  max-width: 60ch;
+  margin: 0 auto 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}

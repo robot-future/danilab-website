@@ -88,29 +88,19 @@ sections:
       order: desc
       page_type: post
     design:
-      view: compact
+      view: newscard
       columns: '1'
 
   - block: markdown
     content:
-      title:
-      subtitle:
+      title: Work With Us
       text: |
-        <div class="row text-center align-items-start">
-        <div class="col-md-6 mb-4 mb-md-0">
+        <div class="work-with-us">
 
-        We're looking for motivated students and researchers to work on robotics, embodied intelligence, and autonomous systems.
+        We welcome enquiries from prospective PhD students, postdoctoral researchers, visiting researchers and collaborators whose interests align with our work in physical AI, robotics and autonomous space systems.
 
-        {{% cta cta_link="./contact/" cta_text="Join the lab →" %}}
+        {{% cta cta_link="./contact/" cta_text="Join DANiLab" %}}
 
-        </div>
-        <div class="col-md-6">
-
-        DANiLab is a growing research group led by Dr Daniel Hao, with PhD researchers and collaborators working on AI, robotics, and autonomous systems.
-
-        {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
-
-        </div>
         </div>
     design:
       columns: '1'

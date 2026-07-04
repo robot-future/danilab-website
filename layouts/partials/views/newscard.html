@@ -1,0 +1,46 @@
+{{/* DANiLab "newscard" view — a compact, equal-height news card:
+     16:9 cover image, date, 2-line title, 3-line excerpt (clamped in CSS) and
+     a "Read more" affordance. Designed for the homepage Latest News grid. */}}
+{{ $item := .item }}
+{{ $link := $item.RelPermalink }}
+{{ $target := "" }}
+{{ if $item.Params.external_link }}
+  {{ $link = $item.Params.external_link }}
+  {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ end }}
+
+{{/* Summary: explicit front-matter summary, else the auto-summary stripped of
+     markup (CSS line-clamp trims it to a few lines). */}}
+{{ $summary := "" }}
+{{ if $item.Params.summary }}
+  {{ $summary = $item.Params.summary | markdownify | plainify }}
+{{ else if $item.Summary }}
+  {{ $summary = $item.Summary | plainify | htmlUnescape }}
+{{ end }}
+{{/* Strip any raw URL (and its wrapping brackets) from the auto-excerpt, then
+     tidy leftover whitespace, so links never appear in the visible excerpt. */}}
+{{ $summary = $summary | replaceRE `\s*[\(\[]?https?://[^\s)\]]+[\)\]]?` "" | replaceRE `\s{2,}` " " }}
+
+<article class="news-card">
+  {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
+  {{ $anchor := $item.Params.image.focal_point | default "Smart" }}
+  {{ with $resource }}
+    {{ $image := .Fill (printf "800x450 %s" $anchor) }}
+    {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
+    {{/* Image links to the article but is hidden from AT/keyboard so the card
+         exposes a single meaningful link (the title) — no duplicate links. */}}
+    <a class="news-card__media" href="{{ $link }}" {{ $target | safeHTMLAttr }} tabindex="-1" aria-hidden="true">
+      <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}"
+           alt="" loading="lazy">
+    </a>
+  {{ end }}
+
+  <div class="news-card__body">
+    <div class="news-card__date">{{ $item.Date.Format (site.Params.locale.date_format | default "Jan 2, 2006") }}</div>
+    <h3 class="news-card__title">
+      <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
+    </h3>
+    {{ with $summary }}<p class="news-card__excerpt">{{ . }}</p>{{ end }}
+    <a class="news-card__more" href="{{ $link }}" {{ $target | safeHTMLAttr }} aria-label="Read more: {{ $item.Title }}">Read more <i class="fas fa-angle-right" aria-hidden="true"></i></a>
+  </div>
+</article>
