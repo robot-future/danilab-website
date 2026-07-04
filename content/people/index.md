@@ -33,7 +33,7 @@ sections:
 
         <div class="person-role">Research Fellow</div>
 
-        In-Space Servicing and Space Metallurgy (UKSA)
+        In-Space Servicing, Assembly and Manufacturing (ISAM) and Space Metallurgy (UKSA)
 
         </div>
 
