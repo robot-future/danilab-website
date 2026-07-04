@@ -7,16 +7,23 @@ type: landing
 sections:
   - block: hero
     content:
-      title: |
-        Dynamics, Astronautics &
-        Neural Intelligence Lab
+      # Brand wordmark rendered as the hero <h1>. Only the lowercase "i" is
+      # the theme red; screen readers still read the whole word "DANiLab".
+      wordmark: 'DAN<span class="home-hero__i">i</span>Lab'
+      fullname: Dynamics, Astronautics & Neural Intelligence Lab
+      headline: Physical AI for robotics, manufacturing and space
+      text: |
+        DANiLab develops intelligent systems that understand, predict and act in the physical world. Our research combines world models, vision-language-action models and autonomous control for robotics, manufacturing and space missions.
       image:
         filename: danilab-banner.jpg
-      text: |
-        *Advancing AI-Powered Intelligent Systems*
-
-        DANiLab at the University of Leicester develops embodied AI and world models that let robots generalise to unseen tasks — from human-robot collaboration to autonomous systems for manufacturing and space.
-
+        alt: Illustration of the DANiLab team with robotic systems in a laboratory
+      cta:
+        url: ./publication/
+        label: View publications
+      cta_alt:
+        url: ./people/
+        label: Meet the team
+                                              
   - block: markdown
     content:
       title: Research Themes

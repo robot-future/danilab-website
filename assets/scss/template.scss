@@ -156,3 +156,98 @@ html {
   padding: 0.15rem 0.65rem;
   margin: 0.35rem 0 0.5rem;
 }
+
+// ============================================================
+// Homepage hero (Phase 1) — homepage-scoped `home-hero__*` classes.
+// Lightly tinted two-column panel: wordmark + expanded name + headline +
+// mission + two CTAs on the left, illustration on the right (stacked on
+// mobile, text first). Type scale uses clamp() so it flexes 390px–1440px.
+// ============================================================
+
+// The panel carries its own padding, so trim the section's heavy default
+// vertical padding to avoid a cavernous gap above/below the hero.
+.home-section.wg-hero {
+  padding-block: 2.5rem;
+}
+
+.home-hero {
+  // Very subtle red-tinted surface (~4% accent over the page background),
+  // with a solid fallback for engines without color-mix().
+  background-color: #f8f1f2;
+  background-color: color-mix(in srgb, #{$sta-primary} 4%, #{$sta-background});
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: clamp(1.75rem, 4vw, 3.25rem);
+}
+
+.home-hero__inner {
+  margin: 0;
+}
+
+.home-hero__wordmark {
+  font-family: $sta-font-heading, serif;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  font-size: clamp(2.75rem, 5vw, 4rem);
+  margin: 0 0 0.4rem;
+}
+// Only the lowercase "i" takes the accent; the rest stays charcoal.
+.home-hero__i {
+  color: $sta-primary;
+}
+
+.home-hero__fullname {
+  font-family: $sta-font-heading, serif;
+  color: $danilab-muted;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  line-height: 1.3;
+  margin: 0 0 1.1rem;
+}
+
+.home-hero__headline {
+  font-family: $sta-font-heading, serif;
+  font-weight: 600;
+  color: $danilab-text;
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.home-hero__mission {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.6;
+  max-width: 42ch;
+  margin: 0 0 1.75rem;
+}
+
+.home-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.home-hero__cta {
+  margin-bottom: 0;
+}
+
+.home-hero__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+// Mobile: single column, text first then image, and centre the CTA row and
+// the width-limited mission paragraph.
+@include media-breakpoint-down(md) {
+  .home-hero__mission {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home-hero__ctas {
+    justify-content: center;
+  }
+  .home-hero__media {
+    margin-top: 1.75rem;
+  }
+}

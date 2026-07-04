@@ -1,0 +1,81 @@
+{{/* DANiLab project override of the Hugo Blox "hero" block.
+
+     Adds a semantic wordmark (h1) + expanded lab name + headline (h2) +
+     mission paragraph + two CTAs, laid out as a lightly tinted two-column
+     panel (text left / illustration right on desktop, stacked on mobile).
+
+     All copy is supplied from the homepage front matter
+     (content/_index.md) so this template holds no hard-coded text. Image
+     resolution, srcset and CTA link handling mirror the upstream block. */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $c := $block.content }}
+
+<div class="home-hero">
+  <div class="home-hero__inner row align-items-center">
+
+    <div class="home-hero__text col-12 col-md-6 text-center text-md-start">
+
+      {{ with $c.wordmark }}
+        <h1 class="home-hero__wordmark">{{ . | safeHTML }}</h1>
+      {{ end }}
+
+      {{ with $c.fullname }}
+        <p class="home-hero__fullname">{{ . | markdownify }}</p>
+      {{ end }}
+
+      {{ with $c.headline }}
+        <h2 class="home-hero__headline">{{ . | markdownify }}</h2>
+      {{ end }}
+
+      {{ with $c.text }}
+        <div class="home-hero__mission">{{ . | $page.RenderString | emojify }}</div>
+      {{ end }}
+
+      {{ if $c.cta.url }}
+      <div class="home-hero__ctas">
+        {{ $link := $c.cta.url }}
+        {{ $scheme := (urls.Parse $link).Scheme }}
+        {{ $target := "" }}
+        {{ if not $scheme }}{{ $link = $link | relLangURL }}{{ else if in (slice "http" "https") $scheme }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
+        <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} class="btn btn-primary btn-lg home-hero__cta">{{ $c.cta.label | markdownify | emojify | safeHTML }}</a>
+
+        {{ if $c.cta_alt.url }}
+          {{ $link2 := $c.cta_alt.url }}
+          {{ $scheme2 := (urls.Parse $link2).Scheme }}
+          {{ $target2 := "" }}
+          {{ if not $scheme2 }}{{ $link2 = $link2 | relLangURL }}{{ else if in (slice "http" "https") $scheme2 }}{{ $target2 = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
+        <a href="{{ $link2 | safeURL }}" {{ $target2 | safeHTMLAttr }} class="btn btn-outline-primary btn-lg home-hero__cta home-hero__cta--alt">{{ $c.cta_alt.label | markdownify | emojify | safeHTML }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+
+    </div>
+
+    {{ with $c.image.filename }}
+    <div class="home-hero__media col-12 col-md-6">
+      {{- $image := resources.Get (path.Join "media" .) -}}
+      {{ if $image }}
+        {{ $alt := $c.image.alt | default $block.Title }}
+        {{ $isSVG := eq $image.MediaType.SubType "svg" }}
+        {{ if $isSVG -}}
+          <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}" class="home-hero__img">
+        {{- else }}
+          {{ $legacy_img := $image.Resize "600x" }}
+          {{ $srcset := slice }}
+          {{ range (slice 1200 800 600) }}
+            {{ $srcset = $srcset | append (printf "%s %dw" ($image.Resize (printf "%dx" .)).RelPermalink .) }}
+          {{ end }}
+          <img src="{{ $legacy_img.RelPermalink }}"
+               srcset="{{ delimit $srcset "," }}"
+               sizes="(min-width: 768px) 50vw, 100vw"
+               width="{{ $image.Width }}" height="{{ $image.Height }}"
+               alt="{{ $alt }}" class="home-hero__img" loading="eager">
+        {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+
+  </div>
+</div>
