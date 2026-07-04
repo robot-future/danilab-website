@@ -1,0 +1,41 @@
+{{/* DANiLab "pubcard" view — a publication card with the paper's teaser
+     figure on the left and venue badge, title, authors and link pills on the
+     right. Degrades gracefully to a text-only card when a paper has no
+     featured image. */}}
+{{ $item := .item }}
+{{ $link := $item.RelPermalink }}
+
+<article class="pub-card">
+  {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
+  {{ with $resource }}
+    {{ $img := .Resize "600x" }}
+    {{ if ne $img.MediaType.SubType "gif" }}{{ $img = $img.Process "webp" }}{{ end }}
+    <a class="pub-card__media" href="{{ $link }}" tabindex="-1" aria-hidden="true">
+      <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="" loading="lazy">
+    </a>
+  {{ end }}
+
+  <div class="pub-card__body">
+    {{ with $item.Params.publication_short }}
+    <div class="pub-card__venue">
+      <span class="pub-card__venue-badge">{{ . }}</span>
+      {{ with $item.Params.publication }}<span class="pub-card__venue-full">{{ . | markdownify | plainify }}</span>{{ end }}
+    </div>
+    {{ end }}
+
+    <h3 class="pub-card__title"><a href="{{ $link }}">{{ $item.Title }}</a></h3>
+
+    {{ with $item.Params.authors }}
+    <div class="pub-card__authors">{{ delimit . ", " }}</div>
+    {{ end }}
+
+    <div class="pub-card__links">
+      {{ with $item.Params.url_project }}<a class="pub-pill" href="{{ . }}" target="_blank" rel="noopener">Website</a>{{ end }}
+      {{ with $item.Params.url_source }}<a class="pub-pill" href="{{ . }}" target="_blank" rel="noopener">Paper</a>{{ end }}
+      {{ with $item.Params.url_pdf }}<a class="pub-pill" href="{{ . }}" target="_blank" rel="noopener">PDF</a>{{ end }}
+      {{ with $item.Params.url_video }}<a class="pub-pill" href="{{ . }}" target="_blank" rel="noopener">Video</a>{{ end }}
+      {{ with $item.Params.url_code }}<a class="pub-pill" href="{{ . }}" target="_blank" rel="noopener">Code</a>{{ end }}
+      {{ with $item.Params.doi }}<a class="pub-pill" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}
+    </div>
+  </div>
+</article>

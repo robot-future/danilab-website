@@ -479,3 +479,114 @@ html {
   margin: 0;
   color: $danilab-text;
 }
+
+// Publications: hide the theme's isotope search/type/date filter bar — with
+// only a few papers and the card layout, we want the clean list look.
+.form-row:has(.filter-search) {
+  display: none;
+}
+
+// Neutralise the theme's isotope (JS masonry) absolute positioning so the
+// single-column cards flow normally and their margins give even gaps.
+div:has(> .isotope-item) {
+  height: auto !important;
+}
+.isotope-item {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+// Publication cards — teaser figure on the left, details on the right.
+.pub-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background-color: $danilab-card-bg;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.pub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.pub-card__media {
+  flex: 0 0 300px;
+  max-width: 300px;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f4f4f6;
+}
+.pub-card__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.pub-card__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.pub-card__venue {
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+.pub-card__venue-badge {
+  color: $sta-primary;
+  font-weight: 700;
+}
+.pub-card__venue-full {
+  color: $danilab-muted;
+}
+.pub-card__venue-full::before {
+  content: " / ";
+  color: $danilab-muted;
+}
+.pub-card__title {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  margin: 0 0 0.5rem;
+}
+.pub-card__title a {
+  color: $danilab-text;
+}
+.pub-card__title a:hover {
+  color: $sta-primary;
+}
+.pub-card__authors {
+  font-size: 0.9rem;
+  color: $danilab-text;
+  margin-bottom: 0.9rem;
+}
+.pub-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.pub-pill {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $sta-primary;
+  border: 1px solid rgba(200, 16, 46, 0.35);
+  border-radius: 999px;
+  padding: 0.2rem 0.8rem;
+}
+.pub-pill:hover {
+  background-color: $sta-primary;
+  color: #fff;
+}
+
+// Mobile: stack the figure above the details.
+@include media-breakpoint-down(sm) {
+  .pub-card {
+    flex-direction: column;
+  }
+  .pub-card__media {
+    flex-basis: auto;
+    max-width: 100%;
+  }
+}
