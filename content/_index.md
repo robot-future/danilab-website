@@ -148,7 +148,7 @@ sections:
 
         </div>
 
-        <div class="funder__caption">Co-I — EPSRC Centre for Doctoral Training in Digital Transformation of Metals Industry</div>
+        <div class="funder__caption">Co-I — <a href="https://digitalmetal-cdt.ac.uk/">EPSRC Centre for Doctoral Training in Digital Transformation of Metals Industry</a></div>
 
         </div>
 
