@@ -27,9 +27,9 @@ sections:
 
         <div class="person-card">
 
-        {{< figure src="umer-chaudry.jpg" alt="Umer Masood Chaudry" class="team-photo" lightbox="false" >}}
+        {{< figure src="umer-chaudry.jpg" alt="Umer Chaudry" class="team-photo" lightbox="false" >}}
 
-        **[Dr Umer Masood Chaudry](https://scholar.google.com/citations?user=Qwkk_vsAAAAJ&hl=en)**
+        **[Dr Umer Chaudry](https://scholar.google.com/citations?user=Qwkk_vsAAAAJ&hl=en)**
 
         <div class="person-role">Research Fellow</div>
 
