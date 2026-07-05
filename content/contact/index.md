@@ -33,7 +33,7 @@ sections:
 
         **Cutting-edge facilities at your fingertips.** Get hands-on from day one with [our robots, hardware and lab](./robots-hardware/) — collaborative robotic arms, quadruped robots, a full-size humanoid, 3D printing and rapid prototyping, and more.
 
-        **Computing from your desk to the UK's most powerful supercomputer.** You'll have a full stack of compute to work with: dedicated local AI workstations (dual NVIDIA H200), the University of Leicester's ALICE high-performance computing cluster, and — through national allocations — Isambard-AI, the UK's most powerful AI supercomputer. If your idea needs serious horsepower, we have it.
+        **Computing from your desk to the UK's most powerful supercomputer.** You'll have a full stack of compute to work with: dedicated local AI workstations, the University of Leicester's ALICE high-performance computing cluster, and — through national allocations — Isambard-AI, the UK's most powerful AI supercomputer. If your idea needs serious horsepower, we have it.
 
         **A thriving research ecosystem.** You won't just be part of our lab — you'll be plugged into a wider community, including [Space Park Leicester](https://www.space-park.co.uk/), the Institute for Space, and the Trustworthy Autonomous Systems group, working alongside leading researchers and industry partners across AI, robotics and space.
 
