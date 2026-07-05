@@ -87,7 +87,7 @@ sections:
 
         </div>
 
-        <div class="funder__caption">PI — <a href="https://www.space-park.co.uk/2025/12/new-funding-to-develop-technology-for-first-robots-to-weld-in-space/">NSIP-2 ISPARK with TWI Ltd</a><br>PI (Leicester) — NSTP PLATOR with Surrey Space Centre</div>
+        <div class="funder__caption">PI — <a href="https://www.space-park.co.uk/2025/12/new-funding-to-develop-technology-for-first-robots-to-weld-in-space/">NSIP-2 ISPARK with TWI Ltd</a><br>PI (Leicester) — <a href="https://le.ac.uk/news/2023/june/ai-space-pilot">NSTP PLATOR with Surrey Space Centre</a></div>
 
         </div>
 
@@ -101,7 +101,7 @@ sections:
 
         </div>
 
-        <div class="funder__caption">ESA/NASA Mars Sample Return DWI Project E/019A-02R — MSR SRP E3P2</div>
+        <div class="funder__caption"><a href="https://le.ac.uk/physics/research/space-projects-instrumentation/projects/mars-sample-return">ESA/NASA Mars Sample Return DWI Project E/019A-02R — MSR SRP E3P2</a></div>
 
         </div>
 
