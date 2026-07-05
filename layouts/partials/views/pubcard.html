@@ -4,6 +4,7 @@
      featured image. */}}
 {{ $item := .item }}
 {{ $link := $item.RelPermalink }}
+{{ with $item.Params.external_link }}{{ $link = . }}{{ end }}
 
 <article class="pub-card">
   {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
@@ -29,7 +30,12 @@
     <div class="pub-card__authors">{{ delimit . ", " }}</div>
     {{ end }}
 
+    {{ with $item.Params.abstract }}
+    <p class="pub-card__desc">{{ . | markdownify }}</p>
+    {{ end }}
+
     <div class="pub-card__links">
+      {{ with $item.Params.url_dataset }}<a class="pub-pill" href="{{ . }}" target="_blank" rel="noopener">Hugging Face</a>{{ end }}
       {{ with $item.Params.url_project }}<a class="pub-pill" href="{{ . }}" target="_blank" rel="noopener">Website</a>{{ end }}
       {{ with $item.Params.url_source }}<a class="pub-pill" href="{{ . }}" target="_blank" rel="noopener">Paper</a>{{ end }}
       {{ with $item.Params.url_pdf }}<a class="pub-pill" href="{{ . }}" target="_blank" rel="noopener">PDF</a>{{ end }}

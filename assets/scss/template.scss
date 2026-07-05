@@ -559,7 +559,18 @@ div:has(> .isotope-item) {
 .pub-card__authors {
   font-size: 0.9rem;
   color: $danilab-text;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+.pub-card__desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: $danilab-muted;
+  margin: 0 0 0.9rem;
+}
+
+// Extra space above the "Datasets" heading that follows the publication list.
+.dataset-heading {
+  margin-top: 3.5rem;
 }
 .pub-card__links {
   display: flex;
