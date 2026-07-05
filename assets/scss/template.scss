@@ -109,19 +109,22 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 78px;
+  height: 76px;
   margin-bottom: 0.9rem;
 }
+// Cap both height and width so wide wordmarks (e.g. UK Space Agency) don't
+// dominate and compact marks still read at a comparable visual weight.
 .funder__logo img {
-  max-height: 58px;
-  max-width: 100%;
+  max-height: 46px;
+  max-width: 150px;
   width: auto;
   object-fit: contain;
 }
-// Compact/square marks (e.g. icon-over-wordmark logos) need more height to read
-// at a comparable size to wide single-line wordmarks capped at the same height.
+// Compact/square marks (e.g. the European Commission mark) need more height to
+// read at a comparable size to wide single-line wordmarks.
 .funder__logo--tall img {
-  max-height: 74px;
+  max-height: 66px;
+  max-width: 130px;
 }
 // Reset the figure wrapper's default margins inside the logo band.
 .funder-logo {
@@ -203,6 +206,17 @@ html {
   margin: 0;
 }
 
+// Hero text is centred on mobile and left-aligned on desktop. (Set explicitly
+// here because the theme's responsive text utilities aren't available.)
+.home-hero__text {
+  text-align: center;
+}
+@include media-breakpoint-up(md) {
+  .home-hero__text {
+    text-align: left;
+  }
+}
+
 .home-hero__wordmark {
   font-family: $sta-font-heading, serif;
   font-weight: 700;
@@ -240,28 +254,23 @@ html {
   margin: 0 0 1.75rem;
 }
 
+// Buttons sit at the start (left) of the text column on desktop; they are
+// content-sized (primary solid, secondary outlined) rather than stretched.
 .home-hero__ctas {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 0.75rem;
 }
-// Matched pair: same solid-red scheme, equal width, sitting on one row.
-// flex:1 makes both buttons grow equally to fill the row; the min-width lets
-// them wrap to a stack only on very narrow (mobile) widths. Trim the default
-// btn-lg font/padding so the longer label stays on a single line.
 .home-hero__cta {
-  flex: 1 1 0;
-  min-width: 150px;
+  flex: 0 0 auto;
   margin-bottom: 0;
-  // Centre the label inside the button regardless of the theme's button
-  // padding (which otherwise crowds the longer label off-centre).
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.7rem 1.25rem !important;
+  padding: 0.7rem 1.5rem !important;
   font-size: 1rem;
   white-space: nowrap;
-  text-align: center;
 }
 
 .home-hero__img {
@@ -323,19 +332,20 @@ html {
   margin-top: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 0.55rem;
 }
 
-// Quiet, non-interactive tags (not buttons — no links, no hover, no pointer).
+// Quiet, non-interactive tags (not buttons — no links, no hover). Darker text
+// and a touch more padding for readability.
 .research-area__tag {
   display: inline-block;
-  font-size: 0.8rem;
-  line-height: 1.4;
-  color: $danilab-muted;
-  background-color: #f1f2f4;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: $danilab-text;
+  background-color: #eceef1;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 6px;
-  padding: 0.2rem 0.6rem;
+  padding: 0.32rem 0.72rem;
 }
 
 // ============================================================
@@ -413,9 +423,12 @@ html {
 }
 .news-card__title a {
   color: $danilab-text;
+  text-decoration: none;
 }
-.news-card__title a:hover {
+.news-card__title a:hover,
+.news-card__title a:focus {
   color: $sta-primary;
+  text-decoration: underline;
 }
 .news-card__excerpt {
   font-size: 0.92rem;
@@ -448,21 +461,37 @@ html {
 // (replaces the old duplicate Join + Meet-the-team CTAs; the hero already
 // links to the Team). Lightly tinted, centred, not a big promo banner.
 // ============================================================
+// Compact pale band. On desktop the text and button sit side by side; they
+// stack (and centre) on mobile.
 .work-with-us {
-  max-width: 760px;
+  max-width: 900px;
   margin: 0 auto;
-  text-align: center;
   background-color: #f8f1f2;
   background-color: color-mix(in srgb, #{$sta-primary} 4%, #{$sta-background});
   border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 16px;
-  padding: clamp(1.75rem, 4vw, 2.75rem);
+  border-radius: 14px;
+  padding: clamp(1.4rem, 3vw, 1.9rem) clamp(1.5rem, 4vw, 2.4rem);
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  text-align: left;
 }
-.work-with-us p {
-  max-width: 60ch;
-  margin: 0 auto 1.5rem;
-  font-size: 1.05rem;
-  line-height: 1.6;
+.work-with-us__text {
+  flex: 1 1 auto;
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+.work-with-us .cta-group {
+  flex: 0 0 auto;
+  margin: 0;
+}
+@include media-breakpoint-down(md) {
+  .work-with-us {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.1rem;
+  }
 }
 
 // Publications page: highlighted "site recently migrated" notice at the top.

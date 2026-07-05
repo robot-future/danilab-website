@@ -15,7 +15,7 @@
 <div class="home-hero">
   <div class="home-hero__inner row align-items-center">
 
-    <div class="home-hero__text col-12 col-md-6 text-center text-md-start">
+    <div class="home-hero__text col-12 col-md-6">
 
       {{ with $c.wordmark }}
         <h1 class="home-hero__wordmark">{{ . | safeHTML }}</h1>
@@ -46,7 +46,7 @@
           {{ $scheme2 := (urls.Parse $link2).Scheme }}
           {{ $target2 := "" }}
           {{ if not $scheme2 }}{{ $link2 = $link2 | relLangURL }}{{ else if in (slice "http" "https") $scheme2 }}{{ $target2 = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
-        <a href="{{ $link2 | safeURL }}" {{ $target2 | safeHTMLAttr }} class="btn btn-primary btn-lg home-hero__cta">{{ $c.cta_alt.label | markdownify | emojify | safeHTML }}</a>
+        <a href="{{ $link2 | safeURL }}" {{ $target2 | safeHTMLAttr }} class="btn btn-outline-primary btn-lg home-hero__cta home-hero__cta--alt">{{ $c.cta_alt.label | markdownify | emojify | safeHTML }}</a>
         {{ end }}
       </div>
       {{ end }}

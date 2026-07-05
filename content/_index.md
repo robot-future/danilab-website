@@ -13,17 +13,17 @@ sections:
       fullname: Dynamics, Astronautics & Neural Intelligence Lab
       headline: Physical AI for robotics, manufacturing and space
       text: |
-        DANiLab develops intelligent systems that understand, predict and act in the physical world. Our research combines world models, vision-language-action models and autonomous control for robotics, manufacturing and space missions.
+        DANiLab develops AI systems that understand, predict and act in the physical world. We combine world models, vision-language-action models and autonomous control to advance robotics, manufacturing and space missions.
       image:
         filename: danilab-banner.jpg
         alt: Illustration of the DANiLab team with robotic systems in a laboratory
       cta:
         url: ./publication/
-        label: Explore our research
+        label: View Publications
       cta_alt:
         url: ./people/
-        label: Meet the team
-                                              
+        label: Meet the Team
+
   - block: markdown
     content:
       title: Research Areas
@@ -72,6 +72,72 @@ sections:
     design:
       columns: '1'
 
+  - block: markdown
+    content:
+      title: Selected Projects and Funders
+      subtitle:
+      text: |
+        <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-lg-3 mb-4 d-flex">
+
+        <div class="funder">
+        <div class="funder__logo">
+
+        {{< figure src="funders/uksa-logo.png" alt="UK Space Agency" class="funder-logo" lightbox="false" >}}
+
+        </div>
+
+        <div class="funder__caption">PI — <a href="https://www.space-park.co.uk/2025/12/new-funding-to-develop-technology-for-first-robots-to-weld-in-space/">NSIP-2 ISPARK with TWI Ltd</a><br>PI (Leicester) — NSTP PLATOR with Surrey Space Centre</div>
+
+        </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 mb-4 d-flex">
+
+        <div class="funder">
+        <div class="funder__logo">
+
+        {{< figure src="funders/esa-logo.png" alt="European Space Agency" class="funder-logo" lightbox="false" >}}
+
+        </div>
+
+        <div class="funder__caption">ESA/NASA Mars Sample Return DWI Project E/019A-02R — MSR SRP E3P2</div>
+
+        </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 mb-4 d-flex">
+
+        <div class="funder">
+        <div class="funder__logo">
+
+        {{< figure src="funders/ukri-epsrc-logo.png" alt="UKRI EPSRC" class="funder-logo" lightbox="false" >}}
+
+        </div>
+
+        <div class="funder__caption">Co-I — <a href="https://digitalmetal-cdt.ac.uk/">EPSRC Centre for Doctoral Training in Digital Transformation of Metals Industry</a></div>
+
+        </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 mb-4 d-flex">
+
+        <div class="funder">
+        <div class="funder__logo funder__logo--tall">
+
+        {{< figure src="funders/agentic-6g-logo.png" alt="Agentic-6G" class="funder-logo" lightbox="false" >}}
+
+        </div>
+
+        <div class="funder__caption">Co-I — Agentic-6G Autonomous multi-agent agentic AI system for 6G networks</div>
+
+        </div>
+
+        </div>
+        </div>
+    design:
+      columns: '1'
+
   - block: collection
     content:
       title: Latest News
@@ -87,6 +153,8 @@ sections:
       offset: 0
       order: desc
       page_type: post
+      archive:
+        text: View all news
     design:
       view: newscard
       columns: '1'
@@ -97,76 +165,10 @@ sections:
       text: |
         <div class="work-with-us">
 
-        We welcome enquiries from prospective PhD students, postdoctoral researchers, visiting researchers and collaborators whose interests align with our work in physical AI, robotics and autonomous space systems.
+        <p class="work-with-us__text">We welcome enquiries from prospective PhD students, postdoctoral researchers, visiting researchers and collaborators whose interests align with our work in physical AI, robotics and autonomous space systems.</p>
 
         {{% cta cta_link="./contact/" cta_text="Join DANiLab" %}}
 
-        </div>
-    design:
-      columns: '1'
-
-  - block: markdown
-    content:
-      title: Selected Projects and Funders
-      subtitle:
-      text: |
-        <div class="row justify-content-center">
-        <div class="col-6 col-md-3 mb-4 d-flex">
-
-        <div class="funder">
-        <div class="funder__logo">
-
-        {{< figure src="funders/uksa-logo.png" alt="UK Space Agency" class="funder-logo" lightbox="false" >}}
-
-        </div>
-
-        <div class="funder__caption">PI — NSIP-2 ISPARK with TWI Ltd<br>PI (Leicester) — NSTP PLATOR with Surrey Space Centre</div>
-
-        </div>
-
-        </div>
-        <div class="col-6 col-md-3 mb-4 d-flex">
-
-        <div class="funder">
-        <div class="funder__logo">
-
-        {{< figure src="funders/esa-logo.png" alt="European Space Agency" class="funder-logo" lightbox="false" >}}
-
-        </div>
-
-        <div class="funder__caption">ESA/NASA Mars Sample Return DWI Project E/019A-02R — MSR SRP E3P2</div>
-
-        </div>
-
-        </div>
-        <div class="col-6 col-md-3 mb-4 d-flex">
-
-        <div class="funder">
-        <div class="funder__logo">
-
-        {{< figure src="funders/ukri-epsrc-logo.png" alt="UKRI EPSRC" class="funder-logo" lightbox="false" >}}
-
-        </div>
-
-        <div class="funder__caption">Co-I — <a href="https://digitalmetal-cdt.ac.uk/">EPSRC Centre for Doctoral Training in Digital Transformation of Metals Industry</a></div>
-
-        </div>
-
-        </div>
-        <div class="col-6 col-md-3 mb-4 d-flex">
-
-        <div class="funder">
-        <div class="funder__logo funder__logo--tall">
-
-        {{< figure src="funders/agentic-6g-logo.png" alt="Agentic-6G" class="funder-logo" lightbox="false" >}}
-
-        </div>
-
-        <div class="funder__caption">Co-I — Agentic-6G Autonomous multi-agent agentic AI system for 6G networks</div>
-
-        </div>
-
-        </div>
         </div>
     design:
       columns: '1'
