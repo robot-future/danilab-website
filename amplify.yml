@@ -1,0 +1,37 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        # --- Go toolchain (required: this theme uses Hugo Modules) ---
+        # The Amplify build image does not ship a guaranteed Go, so install a
+        # pinned version ourselves. Set GO_VERSION in the Amplify console.
+        - 'echo "Installing Go ${GO_VERSION}"'
+        - 'curl -sSL "https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz" -o /tmp/go.tar.gz'
+        - 'rm -rf /usr/local/go && tar -C /usr/local -xzf /tmp/go.tar.gz'
+        - 'export PATH=$PATH:/usr/local/go/bin'
+        - 'go version'
+        # --- Hugo Extended (pinned; needs the extended build for SCSS + WebP) ---
+        # Set HUGO_VERSION in the Amplify console.
+        - 'echo "Installing Hugo Extended v${HUGO_VERSION}"'
+        - 'curl -sSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" -o /tmp/hugo.tar.gz'
+        - 'tar -xzf /tmp/hugo.tar.gz -C /tmp hugo'
+        - 'mv /tmp/hugo /usr/local/bin/hugo'
+        - 'hugo version'
+    build:
+      commands:
+        # go must be on PATH so Hugo Modules can resolve/download.
+        # baseURL (https://danilab.org/) is set in config/_default/hugo.yaml,
+        # so no -b flag is needed. `hugo` builds in the production environment
+        # by default.
+        - 'export PATH=$PATH:/usr/local/go/bin'
+        - 'hugo --gc --minify'
+  artifacts:
+    baseDirectory: public
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - 'resources/**/*'
+      - '/root/go/pkg/mod/**/*'
+      - '/root/.cache/hugo_cache/**/*'
