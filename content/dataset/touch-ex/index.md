@@ -1,7 +1,8 @@
 ---
-title: "Touch-Ex: A Multimodal Visuo-Tactile Dataset"
+title: "Touch-Ex: A Region-Level, Force-Annotated Visuo-Tactile Dataset"
 authors:
   - Gemma McLean
+  - Zhou Daniel Hao
 date: "2026-01-01T00:00:00Z"
 publishDate: "2026-01-01T00:00:00Z"
 
