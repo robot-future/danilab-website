@@ -643,3 +643,43 @@ div:has(> .isotope-item) {
   max-width: 280px;
   height: auto;
 }
+
+// Join page: group photos in a uniform grid (two rows of three on desktop,
+// stacked on mobile). All images are cropped to a common 4:3 frame so mixed
+// aspect ratios — including the portrait visit photo — line up cleanly.
+.lab-gallery__img {
+  margin: 0 !important;
+}
+.lab-gallery__img img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.lab-gallery__img figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: $danilab-muted;
+  text-align: center;
+}
+
+// Team page: high-resolution group photo above the member grid.
+.team-hero-photo {
+  margin: 0 auto 2.5rem !important;
+  max-width: 880px;
+}
+.team-hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+.team-hero-photo figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: $danilab-muted;
+  text-align: center;
+}

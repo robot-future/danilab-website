@@ -9,6 +9,8 @@ sections:
     content:
       title: Meet the Team
       text: |
+        {{< figure src="group-team.jpg" alt="The DANiLab team with a full-size humanoid robot at a STEM event at LGS" caption="Humanoid robot at a STEM event at LGS" class="team-hero-photo" lightbox="false" >}}
+
         <div class="row text-center">
         <div class="col-6 col-sm-4 col-md-3 mb-4">
 

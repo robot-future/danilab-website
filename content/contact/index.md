@@ -27,6 +27,45 @@ sections:
 
   - block: markdown
     content:
+      title: Life in the lab
+      text: |
+        <div class="row lab-gallery">
+        <div class="col-md-4 mb-4">
+
+        {{< figure src="group-icecream.jpg" alt="DANiLab team enjoying ice cream on a sunny day" caption="Ice cream in the summer sun" class="lab-gallery__img" lightbox="false" >}}
+
+        </div>
+        <div class="col-md-4 mb-4">
+
+        {{< figure src="group-ispark.jpg" alt="The DANiLab team at Space Park Leicester" caption="The UKSA ISPARK team at Space Park Leicester" class="lab-gallery__img" lightbox="false" >}}
+
+        </div>
+        <div class="col-md-4 mb-4">
+
+        {{< figure src="group-driverleics.jpg" alt="The DriverLeics student team at an exhibition" caption="Our PG/UG DriverLeics team" class="lab-gallery__img" lightbox="false" >}}
+
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+
+        {{< figure src="group-dinner.jpg" alt="The DANiLab team at a group dinner" caption="Team dinner" class="lab-gallery__img" lightbox="false" >}}
+
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+
+        {{< figure src="group-visit.jpg" alt="Members of the lab with a research robot" caption="A robotics research visit" class="lab-gallery__img" lightbox="false" >}}
+
+        </div>
+        <div class="col-md-4">
+
+        {{< figure src="group-bristol.jpg" alt="The DANiLab team hosting a research visitor" caption="Hosting a visitor from Bristol" class="lab-gallery__img" lightbox="false" >}}
+
+        </div>
+        </div>
+    design:
+      columns: '1'
+
+  - block: markdown
+    content:
       title: Why join DANiLab
       text: |
         Joining DANiLab is about more than a project — it's the people, the kit, and the freedom to turn ambitious ideas into real systems. Here's what you can look forward to:
