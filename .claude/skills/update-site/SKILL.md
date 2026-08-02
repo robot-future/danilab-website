@@ -28,10 +28,11 @@ There is nothing to click in the AWS console for a normal content update.
 
 ## Environment
 
-- `hugo` is NOT on PATH. Use the full path: **`/Users/dhwork/bin/hugo`**
-  (v0.135.0 extended). Check with `ls /Users/dhwork/bin/hugo` if commands fail.
-- Build: `/Users/dhwork/bin/hugo --gc` (add `--minify` to mirror production).
-- Local preview: `nohup /Users/dhwork/bin/hugo server > /tmp/hugo.log 2>&1 & disown`
+- **`hugo` may not be on PATH.** It is Hugo **v0.135.0 extended**. If `hugo`
+  is not found, look for it at `~/bin/hugo` and use that full path for every
+  command below.
+- Build: `hugo --gc` (add `--minify` to mirror production).
+- Local preview: `nohup hugo server > /tmp/hugo.log 2>&1 & disown`
   then http://localhost:1313
 - No Node/npm. Theme is installed via **Hugo Modules** (needs Go at build time).
 - Git remote uses **SSH** (`git@github.com:robot-future/danilab-website.git`),
@@ -40,7 +41,7 @@ There is nothing to click in the AWS console for a normal content update.
 ## The standard update loop
 
 1. Make the edit (usually a markdown file under `content/`).
-2. Build: `/Users/dhwork/bin/hugo --gc` — must succeed with no errors.
+2. Build: `hugo --gc` — must succeed with no errors.
 3. Verify the change landed, e.g. `grep` the built file in `public/`, or start
    the dev server and look at the page.
 4. Show the user what changed. Get their go-ahead.
@@ -225,16 +226,12 @@ dig +short danilab.org                                          # DNS
 
 ## Known context
 
-- Domain registered at **NameSilo**, DNS delegated to **Route 53** (Amplify
-  created the hosted zone). Nameservers: `ns-1013.awsdns-62.net`,
-  `ns-1816.awsdns-35.co.uk`, `ns-206.awsdns-25.com`, `ns-1150.awsdns-15.org`.
-- A **Proton mailbox on `@danilab.org` is currently broken** — the nameserver
-  switch to AWS dropped its MX/SPF/DKIM records. To restore, get the record
-  table from Proton (Settings → Domain names) and recreate those records in the
-  Route 53 hosted zone for danilab.org.
-- The old Bitnami WordPress site on Lightsail has been deleted. Watch for
-  leftover billable resources: unattached static IPs, snapshots, and the
-  **old, now-unused Route 53 hosted zone** (the `ns-275…` one — the live zone
-  is the `ns-1013…` one; do not delete that).
-- Pre-2026 publications are still being migrated; the publications page carries
-  a notice saying so.
+- The site was migrated from WordPress; pre-2026 publications are still being
+  migrated, and the publications page carries a notice saying so.
+- DNS for danilab.org is delegated to Route 53; Amplify manages the records and
+  the TLS certificate.
+
+> **Note:** This repository is public. Keep infrastructure specifics, account
+> details and anything security-relevant **out of this file** — put them in
+> `.claude/NOTES.local.md`, which is gitignored. Read that file too if it
+> exists; it holds private operational notes for this site.
