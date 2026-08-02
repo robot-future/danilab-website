@@ -13,6 +13,15 @@ sections:
         <div class="row">
         <div class="col-12 col-sm-6 col-lg-3 text-center mb-4">
 
+        ![Mega Mewtwo Y](megamewtwoy.jpeg)
+
+        **Mega Mewtwo Y**
+
+        Franka Research 3 7-DoF Robotic Arm with Franka Hand gripper
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+
         ![Machamp](machamp.jpg)
 
         **Machamp**
@@ -38,6 +47,9 @@ sections:
         Local AI powerhouse with 2 x Nvidia PRO RTX 6000 (192 GB VRAM)
 
         </div>
+        </div>
+
+        <div class="row">
         <div class="col-12 col-sm-6 col-lg-3 text-center mb-4">
 
         ![Lucario](lucario.jpeg)
@@ -47,9 +59,6 @@ sections:
         Unitree GO2 Research Version with LiDAR and Nvidia Jetson
 
         </div>
-        </div>
-
-        <div class="row">
         <div class="col-12 col-sm-6 col-lg-3 text-center mb-4">
 
         ![Gizmo](gizmo.jpeg)
