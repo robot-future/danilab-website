@@ -206,6 +206,9 @@ Existing overrides in this repo: `blocks/hero.html`, `views/pubcard.html`,
 - `baseURL` is `https://danilab.org/` in `config/_default/hugo.yaml`, so the
   build needs no `-b` flag.
 - `netlify.toml` is a leftover from the old host. Amplify ignores it.
+- There is **no GitHub Actions deploy**. The template's GitHub Pages workflow
+  (`publish.yaml`) was removed because Pages is not used and it failed on every
+  push. Don't re-add it; Amplify is the only deploy path.
 
 ### If an Amplify build fails
 Ask the user for the **last ~15 lines around the first `[ERROR]`** — not the
