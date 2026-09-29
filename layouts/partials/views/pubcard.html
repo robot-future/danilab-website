@@ -42,6 +42,8 @@
       {{ with $item.Params.url_video }}<a class="pub-pill" href="{{ . }}" target="_blank" rel="noopener">Video</a>{{ end }}
       {{ with $item.Params.url_code }}<a class="pub-pill" href="{{ . }}" target="_blank" rel="noopener">Code</a>{{ end }}
       {{ with $item.Params.doi }}<a class="pub-pill" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}
+      {{/* Non-link note for papers whose links are not public yet (e.g. embargoed). */}}
+      {{ with $item.Params.links_note }}<span class="pub-pill pub-pill--pending">{{ . }}</span>{{ end }}
     </div>
   </div>
 </article>

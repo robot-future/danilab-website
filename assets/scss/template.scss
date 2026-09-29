@@ -619,6 +619,15 @@ div:has(> .isotope-item) {
   background-color: $sta-primary;
   color: #fff;
 }
+// Not a link: a muted, dashed pill for "available after …" notes.
+.pub-pill--pending,
+.pub-pill--pending:hover {
+  color: $danilab-muted;
+  background-color: transparent;
+  border: 1px dashed rgba(107, 114, 128, 0.5);
+  font-weight: 500;
+  cursor: default;
+}
 
 // Mobile: stack the figure above the details.
 @include media-breakpoint-down(sm) {
