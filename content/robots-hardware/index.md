@@ -79,6 +79,18 @@ sections:
         </div>
         <div class="col-12 col-sm-6 col-lg-3 text-center mb-4">
 
+        ![Heatran](heatran.jpeg)
+
+        **Heatran**
+
+        Space Robotic Welding Prototyping Testbed (Ambient), with vacuum chamber at TWI Ltd
+
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+
         ![Other members](other-members.jpeg)
 
         **Other members**
