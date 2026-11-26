@@ -129,7 +129,7 @@ sections:
 
         </div>
 
-        <div class="funder__caption">Co-I — Agentic-6G Autonomous multi-agent agentic AI system for 6G networks</div>
+        <div class="funder__caption">Co-I — <a href="https://agentic6g.eu/">Agentic-6G Autonomous multi-agent agentic AI system for 6G networks</a></div>
 
         </div>
 

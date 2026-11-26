@@ -22,9 +22,8 @@ publication_short: "IAC 2026 · Oral"
 abstract: ""
 featured: false
 
-# Embargoed until the congress; shown as a non-link note on the card.
-# Replace with url_pdf / url_source once the paper is released.
-links_note: "Paper available after Oct 2026"
+# IAF Digital Library record (full manuscript via "Open Manuscript").
+url_source: "https://dl.iafastro.directory/event/IAC-2026/paper/114829/"
 
 image:
   caption: ""
@@ -32,4 +31,4 @@ image:
   preview_only: false
 ---
 
-Accepted for oral presentation at IAC 2026. The paper will be available after the congress (October 2026).
+Presented orally at IAC 2026. The paper is available in the [IAF Digital Library](https://dl.iafastro.directory/event/IAC-2026/paper/114829/).
